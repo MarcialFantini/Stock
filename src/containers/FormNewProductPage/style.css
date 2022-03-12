@@ -1,0 +1,15 @@
+.new-product-page{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.form{
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    margin: 10px 0;
+}
+

@@ -1,0 +1,7 @@
+.form-orders{
+    width: 90%;
+    margin: 5%;
+
+    display: flex;
+    flex-direction: column;
+}

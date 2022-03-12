@@ -1,0 +1,93 @@
+.Navbar{
+    
+    font-size: 2rem;
+
+    width: 100%;
+    background: greenyellow;
+    height: 120px;
+
+    display: flex;
+
+
+    position: fixed;
+    top: 0;
+    
+    z-index: 20;
+}
+
+.menu-icon{
+    width: 120px;
+    height: 120px;
+    background: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.menu-icon-bar{
+    background: black;
+    width: 90%;
+    height: 10%;
+    margin: 5%;
+}
+
+.title-stock{
+    
+    width:100% ;
+    text-align: center;
+    text-justify: center;
+}
+
+.title-stock h1{
+    margin: 10%;
+}
+
+.nav button {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+
+
+}
+
+.nav{
+    background: gainsboro;
+    width: 100%;
+
+    position: absolute;
+    top: -30%;
+    right: 100%;
+
+    z-index: 1;
+
+    list-style: none;
+
+
+    text-align: start;
+    display: flex;
+    flex: row;
+    flex-direction: column;
+    
+    padding: 0;
+    
+    transition: all 0.35s ease-in-out ;
+}
+
+.nav_active{
+    right: 0;
+}
+
+.nav li{
+    margin: 5% 0;
+    background: grey;
+    width: 100%;
+}
+
+.Link {
+    
+    text-decoration: none;
+    color: black;
+}
+

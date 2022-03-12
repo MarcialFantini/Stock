@@ -1,0 +1,16 @@
+.container-products{
+    width: 90%;
+    margin: 20% 5%;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(120px, 1fr) );
+    justify-items: center;
+}
+
+.list-product{
+    min-width: 90px;
+    max-width: 120px;
+}
+
+.list-product picture img{
+    width: 100%;
+}

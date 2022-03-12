@@ -1,0 +1,9 @@
+.cardItem{
+    margin: 0;
+    min-height: 80px;
+    max-width: 100px;
+}
+
+.cardItem picture img{
+    width: 100%;
+}
