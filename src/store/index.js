@@ -13,3 +13,8 @@ const stockApp = combineReducers({
 
 export const store = createStore(stockApp, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
+let unsubscribe = store.subscribe(() => {
+    let stringStore = JSON.stringify(store.getState())
+    localStorage.setItem("store", stringStore)
+    console.log(JSON.parse(localStorage.getItem("store")))
+})

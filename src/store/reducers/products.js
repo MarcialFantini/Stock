@@ -9,9 +9,25 @@ const products = (state = [], action) => {
             const filterState = state.filter(item => (item.id !== action.payload))
             return filterState;
         case MODIFICATE_PRODUCT:
-            const modificateState = state.splice(action.payload.id, 1, action.payload.product)
-            return modificateState;
+
+            const indexTheProductToModificate = state.findIndex(item => {
+                return (item.id === Number(action.payload[1]))
+            })
+
+            const newState = state.map(item => {
+                if (indexTheProductToModificate === item.id) {
+                    return action.payload[0]
+                } else {
+                    return item
+                }
+            })
+
+            // const modificateState = state.splice(indexTheProductToModificate,
+            //     1, action.payload[0])
+
+            return newState;
         default:
+
             return [...state]
     }
 }

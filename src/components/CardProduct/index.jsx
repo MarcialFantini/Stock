@@ -1,8 +1,10 @@
 import React from 'react'
+import ButtonAgregar from './ButtonAgregar'
+import ButtonEliminar from './ButtonEliminar'
 
 import './style.css'
 
-const CardProduct = ({ item, read }) => {
+const CardProduct = ({ item, read, eliminarProduct, modificarProduct, activarModificador }) => {
     return (
 
         <div className="list-product" key={item.id} >
@@ -11,9 +13,15 @@ const CardProduct = ({ item, read }) => {
             </picture>
             <div className="titles-product">
                 <h3>{item.name}</h3>
-                <p>Precio:{item.precio}</p>
+                <p>Precio:{item.price}</p>
             </div>
-            {read ? console.log("yess") : null}
+            {read ? (
+                <ButtonEliminar
+                    item={item}
+                    eliminarProduct={eliminarProduct}
+                    modificarProduct={modificarProduct}
+                    activarModificador={activarModificador}
+                />) : <ButtonAgregar item={item} />}
         </div>
     )
 }

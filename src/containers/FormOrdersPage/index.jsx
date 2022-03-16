@@ -12,7 +12,7 @@ const FormOrdersPage = () => {
     return (
         <>
             <BuscadorProduct />
-            <ListProducts list={list} />
+            <ListProducts list={list} read={false} />
 
             <form className='form-orders' >
                 <h1>Ingrese datos del cliente</h1>

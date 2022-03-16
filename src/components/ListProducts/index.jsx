@@ -4,10 +4,10 @@ import CardProduct from '../CardProduct'
 
 import './style.css'
 
-const ListProducts = ({ list }) => {
+const ListProducts = ({ list, read }) => {
     return (
         <div className='list-products'>
-            {list.map((item) => <CardProduct read={true} key={item.id} item={item} />)}
+            {list.map((item) => <CardProduct read={read} key={item.id} item={item} />)}
         </div>
     )
 }

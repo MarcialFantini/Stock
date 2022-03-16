@@ -1,49 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import FormNewProduct from '../../components/FormNewProduct'
+import { addProduct } from '../../store/actions'
 
 import './style.css'
 
 const FormNewProductPage = () => {
+
+    const initialState = {
+        src: '',
+        name: '',
+        id: 0,
+        price: 0,
+    }
+
+    const [product, setProduct] = useState(initialState)
+
+
+
+    const dispatch = useDispatch()
+
+    const dispatchProduct = (event) => {
+        event.preventDefault()
+        dispatch(addProduct(product))
+        setProduct(initialState)
+    }
+
     return (
         <>
-            <div className='new-product-page'>
-                <h1>
-                    Ingrese nuevo producto
-                </h1>
-                <p>
-                    Los siguientes datos seran utilizados para crear
-                    un nuevo producto en la base de datos del servidor
-                    para poder ser vista en la pestania de stock
-                </p>
-                <form className='form'>
-                    <label>
-                        Nombre:
-                    </label>
-                    <input
-                        placeholder='Nombre'
-                    />
-                    <label>
-                        Precio:
-                    </label>
-                    <input
-                        placeholder='Precio'
-                    />
-                    <label>
-                        ID Producto:
-                    </label>
-                    <input
-                        placeholder='ID Producto'
-                    />
-                    <label>
-                        Url imagen:
-                    </label>
-                    <input
-                        placeholder='Url imagen'
-                    />
-                    <button type='submit'>
-                        Agregar
-                    </button>
-                </form>
-            </div>
+            <FormNewProduct
+                dispatchProduct={dispatchProduct}
+                setProduct={setProduct}
+                product={product}
+            />
 
         </>
     )
