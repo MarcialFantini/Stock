@@ -1,22 +1,23 @@
 .order{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     border: 1px solid black;
     border-radius: 10px;
     width: 80%;
-    height: 60px;
+    height: 120px;    
     margin: 20px auto;
     background: rgba(66, 66, 209, 0.719);
 }
 
 .text{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
 }
 
 .text p{
     margin: 0 40px;
+    color: white;
 }

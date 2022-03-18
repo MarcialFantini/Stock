@@ -58,13 +58,13 @@ const FormOrdersPage = () => {
 
     }
 
-    useEffect(() => {
-        console.log(ordenProducts)
-    }, [ordenProducts])
 
 
     const [busqueda, setBusqueda] = useState("")
 
+    useEffect(() => {
+
+    }, [ordenProducts, busqueda])
 
 
     return (

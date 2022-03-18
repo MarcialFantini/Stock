@@ -41,13 +41,11 @@ const StockPage = () => {
         setId(event.target.value)
         setModificar(!modificar)
 
-
-
     }
     return (
 
         <>
-            {modificar ? <ModificarProductForm id={id} /> : null}
+            {modificar ? <ModificarProductForm setModificar={setModificar} id={id} /> : null}
             <BuscadorProduct setBusqueda={setBusqueda} />
             <div className=''>
                 <ReturnListProduct

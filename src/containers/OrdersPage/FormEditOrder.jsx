@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { modificateOrder } from '../../store/actions'
 
-
+import './style.css'
 
 
 const FormEditOrder = (props) => {
 
     const dispatch = useDispatch()
 
-    const { idOrder } = props
+    const { idOrder, setEditar } = props
 
     const [editDatos, setEditDatos] = useState({
         destinatario: '',
@@ -43,10 +43,12 @@ const FormEditOrder = (props) => {
         }
 
         dispatch(modificateOrder([productEdit, idOrder]))
+
+        setEditar(false)
     }
 
     return (
-        <>
+        <div className='form-orden-container'>
             <form action="" onSubmit={handleOnSubmit}>
                 <label htmlFor="">
                     Destinatario
@@ -66,7 +68,7 @@ const FormEditOrder = (props) => {
                 />
                 <button type="submit">Modificar</button>
             </form>
-        </>
+        </div>
     )
 }
 

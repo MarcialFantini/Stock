@@ -33,7 +33,7 @@ const OrdersPage = () => {
 
     return (
         <>
-            {editar ? <FormEditOrder idOrder={idOrder} /> : null}
+            {editar ? <FormEditOrder setEditar={setEditar} idOrder={idOrder} /> : null}
             <BuscadorOrder
 
                 setBusqueda={setBusqueda}

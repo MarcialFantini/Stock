@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { modificateProduct } from '../../store/actions'
 
-const ModificarProductForm = ({ id }) => {
+import './style.css'
+
+const ModificarProductForm = ({ id, setModificar }) => {
 
     const initialState = {
         src: '',
@@ -27,11 +29,12 @@ const ModificarProductForm = ({ id }) => {
     const modificarProduct = (event) => {
         event.preventDefault()
         dispatch(modificateProduct([productModificate, id]))
+        setModificar(false)
     }
 
 
     return (
-        <div>
+        <div className='form-modificador-container' >
             <form action="">
                 <label htmlFor="">Nombre</label>
                 <input

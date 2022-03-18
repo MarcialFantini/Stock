@@ -14,6 +14,7 @@ import FormNewProductPage from './containers/FormNewProductPage'
 import OrdersPage from './containers/OrdersPage'
 import FormOrdersPage from './containers/FormOrdersPage'
 import StockPage from './containers/StockPage'
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/neworder' element={<FormOrdersPage />} />
           <Route path='/stock' element={<StockPage />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

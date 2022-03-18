@@ -24,7 +24,7 @@ const ReturnListProduct = (props) => {
                 activarModificador={activarModificador}
             /> : null
         })
-
+        listaDeProductos.length = 8
         setListaProduct(listaDeProductos)
     }, [busqueda, eliminarProduct, activarModificador, id, listProducts])
 

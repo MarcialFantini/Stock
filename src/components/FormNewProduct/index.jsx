@@ -37,7 +37,7 @@ const FormNewProduct = ({ setProduct, dispatchProduct, product }) => {
                         Precio:
                     </label>
                     <input
-
+                        type='number'
                         onChange={handlerChange}
                         placeholder='Precio'
                         name='price'
