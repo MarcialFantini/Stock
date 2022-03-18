@@ -4,12 +4,22 @@ import ButtonEliminar from './ButtonEliminar'
 
 import './style.css'
 
-const CardProduct = ({ item, read, eliminarProduct, modificarProduct, activarModificador }) => {
+const CardProduct = (props) => {
+    const {
+        item,
+        read,
+        eliminarProduct,
+        modificarProduct,
+        activarModificador,
+        agregarProduct } = props
+
+
+
     return (
 
         <div className="list-product" key={item.id} >
             <picture>
-                <img src={item.src} />
+                <img src={item.src} alt={item.name} />
             </picture>
             <div className="titles-product">
                 <h3>{item.name}</h3>
@@ -21,7 +31,7 @@ const CardProduct = ({ item, read, eliminarProduct, modificarProduct, activarMod
                     eliminarProduct={eliminarProduct}
                     modificarProduct={modificarProduct}
                     activarModificador={activarModificador}
-                />) : <ButtonAgregar item={item} />}
+                />) : <ButtonAgregar item={item} agregarProduct={agregarProduct} />}
         </div>
     )
 }

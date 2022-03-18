@@ -12,6 +12,7 @@ const FormNewProductPage = () => {
         name: '',
         id: 0,
         price: 0,
+        cantidad: 1,
     }
 
     const [product, setProduct] = useState(initialState)

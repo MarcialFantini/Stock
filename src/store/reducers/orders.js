@@ -11,7 +11,17 @@ const orders = (state = [], action) => {
             const filterState = state.filter(item => (item.id !== action.payload))
             return filterState;
         case MODIFICATE_ORDER:
-            const modificateState = state.splice(action.payload.id, 1, action.payload.order)
+
+            const modificateState = state.map(item => {
+                if (item.id === action.payload[1]) {
+                    return action.payload[0]
+                } else {
+                    return item
+                }
+            })
+
+            // const modificateState = state.splice(action.payload.id,
+            //  1, action.payload.order)
             return modificateState;
         default:
             return [...state]

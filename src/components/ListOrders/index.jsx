@@ -1,10 +1,17 @@
 import React from 'react'
 import Order from '../Order'
 
-const ListOrders = ({ list }) => {
+const ListOrders = ({ list, read, setIdOrder, editarActive, handleDelete }) => {
     return (
         <div>
-            {list.map((item) => <Order key={item.id} item={item} />)}
+            {list.map((item) => <Order
+                editarActive={editarActive}
+                setIdOrder={setIdOrder}
+                read={read}
+                key={item.id}
+                item={item}
+                handleDelete={handleDelete}
+            />)}
         </div>
     )
 }

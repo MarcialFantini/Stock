@@ -10,7 +10,9 @@ const HomePage = () => {
             <header className='header'>
                 <picture>
                     <img src={picture} />
-                    <h1>Bienvenido a Stock</h1>
+                    <div className='container-titulo'>
+                        <h1>Bienvenido a Stock</h1>
+                    </div>
                 </picture>
             </header>
         </>

@@ -1,7 +1,7 @@
 .list-products{
     width: 90%;
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(120px, 1fr) );
+    grid-template-columns: repeat( auto-fill, minmax(80px, 1fr) );
     grid-template-rows: auto;
     gap: 30px;
     margin: 5%;

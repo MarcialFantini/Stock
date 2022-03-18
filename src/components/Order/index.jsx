@@ -1,12 +1,24 @@
 import React from 'react'
+import Btns from './Btns'
 
-const Order = ({ item }) => {
+import './style.css'
+const Order = ({ item, read, setIdOrder, editarActive, handleDelete }) => {
+
+    const handleSetId = (event) => {
+        setIdOrder(event.target.value)
+        console.log(event.target.value)
+        editarActive()
+    }
+    console.log(item)
+
     return (
         <div className="order">
-            <div className="text"> {item.text} </div>
+            <div className="text">
+                <p>{item.destinatario}</p>
+                <p>{item.direccion}</p>
+            </div>
             <div className="actions">
-                <button>Editar</button>
-                <button>Eliminar</button>
+                <Btns read={read} handleSetId={handleSetId} item={item} handleDelete={handleDelete} />
             </div>
 
         </div>
