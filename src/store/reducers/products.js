@@ -1,6 +1,16 @@
 import { ADD_PRODUCT, DELETE_PRODUCT, MODIFICATE_PRODUCT } from "../actionsTypes";
 
-const products = (state = [], action) => {
+const initialState = () => {
+    const store = localStorage.getItem("store")
+    const parseStore = JSON.parse(store)
+    console.log(parseStore.products)
+    const returneable = parseStore.products || []
+    return returneable
+}
+
+
+
+const products = (state = initialState(), action) => {
     switch (action.type) {
         case ADD_PRODUCT:
             return [...state, action.payload]
